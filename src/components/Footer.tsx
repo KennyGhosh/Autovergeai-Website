@@ -127,7 +127,7 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="border-t border-gray-600 pt-8 mt-8">
           <div className="flex justify-start items-center">
             <p className="text-sm text-gray-400">
-              © 2025 All Rights Reserved – AutoVerge AI
+              © 2025 All Rights Reserved – Autoverge AI
             </p>
           </div>
         </div>
