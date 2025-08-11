@@ -78,5 +78,3 @@ export const Hero: React.FC<HeroProps> = ({ onGetInTouchClick }) => {
     </section>
   );
 }
-
-
