@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ onGetInTouchClick }) => {
               We are not a{' '}
               <span className="inline-block min-w-[280px] md:min-w-[400px] lg:min-w-[500px] text-left">
                 <span 
-  className={`text-blue-1000 italic transition-opacity duration-300 ${
+  className={`text-blue-9000 italic transition-opacity duration-300 ${
     isVisible ? 'opacity-100' : 'opacity-0'
                 }`}
               >
