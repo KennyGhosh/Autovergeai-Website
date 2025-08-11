@@ -46,13 +46,14 @@ export const Hero: React.FC<HeroProps> = ({ onGetInTouchClick }) => {
 
               We are not a{' '}
               <span className="inline-block min-w-[280px] md:min-w-[400px] lg:min-w-[500px] text-left">
-                <span 
-  className={text-gray-600 italic transition-opacity duration-300 ${
+                <span
+  className={`text-gray-600 italic transition-opacity duration-300 ${
     isVisible ? 'opacity-100' : 'opacity-0'
-                }}
-              >
-                  {words[currentWordIndex]}
-                </span>
+  }`}
+>
+  {words[currentWordIndex]}
+</span>
+
               </span>{' '}
               Company.
             </h1>
