@@ -50,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({ onGetInTouchClick }) => {
   className={text-gray-600 italic transition-opacity duration-300 ${
     isVisible ? 'opacity-100' : 'opacity-0'
                 }}
-              >
+              
                   {words[currentWordIndex]}
                 </span>
               </span>{' '}
