@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
+import React from 'react';
+import { useState, useEffect } from 'react';
 
 interface HeroProps {
   onGetInTouchClick: () => void;
@@ -8,12 +9,18 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onGetInTouchClick }) => {
   const words = ["Development", "Consultancy", "Education"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) =>
-        prevIndex === words.length - 1 ? 0 : prevIndex + 1
-      );
+      setIsVisible(false);
+      
+      setTimeout(() => {
+        setCurrentWordIndex((prevIndex) => 
+          prevIndex === words.length - 1 ? 0 : prevIndex + 1
+        );
+        setIsVisible(true);
+      }, 300);
     }, 2500);
 
     return () => clearInterval(interval);
@@ -34,39 +41,33 @@ export const Hero: React.FC<HeroProps> = ({ onGetInTouchClick }) => {
         <div className="space-y-8">
           {/* Main Animated Text */}
           <div className="space-y-2">
-            <h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-black leading-tight"
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-black leading-tight"
               style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}
-            >
+              >
+
               We are not a{' '}
               <span className="inline-block min-w-[280px] md:min-w-[400px] lg:min-w-[500px] text-left">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={currentWordIndex}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="text-gray-600 italic inline-block"
-                  >
-                    {words[currentWordIndex]}
-                  </motion.span>
-                </AnimatePresence>
+                <span 
+  className={text-gray-600 italic transition-opacity duration-300 ${
+    isVisible ? 'opacity-100' : 'opacity-0'
+                }}
+              >
+                  {words[currentWordIndex]}
+                </span>
               </span>{' '}
               Company.
             </h1>
           </div>
-
+          
           {/* Static Bottom Text */}
           <div className="pt-6">
-            <p
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black"
+            <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black"
               style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}
-            >
+              >
               "We are all of the above"
             </p>
           </div>
-
+          
           {/* Subtle Tagline */}
           <div className="pt-8">
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -77,4 +78,6 @@ export const Hero: React.FC<HeroProps> = ({ onGetInTouchClick }) => {
       </div>
     </section>
   );
-};
+}
+
+
