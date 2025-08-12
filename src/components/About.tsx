@@ -23,7 +23,7 @@ export const About: React.FC = () => {
               <div className="bg-white rounded-2xl p-8 h-full">
                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-black">
   <img
-    src="/final.jpg"
+    src="/finalcopy.jpg"
     alt="Kenny Ghosh"
     className="w-full h-full object-cover"
   />
