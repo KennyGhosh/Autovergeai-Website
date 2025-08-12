@@ -21,7 +21,7 @@ export const About: React.FC = () => {
           <div className="relative">
             <div className="bg-black rounded-2xl p-1">
               <div className="bg-white rounded-2xl p-8 h-full">
-               <div className="w-64 h-64 rounded-full overflow-hidden mx-auto mb-6 border-4 border-black">
+               <div className="w-52 h-52 rounded-full overflow-hidden mx-auto mb-6 border-4 border-black">
   <img
     src="/final-copy.jpg"
     alt="Kenny Ghosh"
