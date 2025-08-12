@@ -21,13 +21,14 @@ export const About: React.FC = () => {
           <div className="relative">
             <div className="bg-black rounded-2xl p-1">
               <div className="bg-white rounded-2xl p-8 h-full">
-               <div className="w-52 h-52 rounded-full overflow-hidden mx-auto mb-6 border-4 border-black">
+               <div className="mx-auto mb-6 border-4 border-black rounded-xl overflow-hidden">
   <img
-    src="/final-copy.jpg"
+    src="/kenny-copy.jpg"
     alt="Kenny Ghosh"
-    className="w-full h-full object-cover"
+    className="w-full h-auto object-contain"
   />
 </div>
+
 
 
                 <div className="text-center">
