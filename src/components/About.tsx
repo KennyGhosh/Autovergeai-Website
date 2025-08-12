@@ -25,7 +25,7 @@ export const About: React.FC = () => {
   <img
     src="/2.jpg"
     alt="Kenny Ghosh"
-    className="w-full h-full object-contain scale-120"
+    className="w-full h-full object-contain scale-140"
   />
 </div>
 
